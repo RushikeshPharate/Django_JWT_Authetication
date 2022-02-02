@@ -31,7 +31,7 @@ export const authSlice = createSlice({
       },
 
     setIsAuthenticated: (state,action) => {
-        state.user_details = action.payload;
+        state.isAuthenticated = action.payload;
       },
 
     setLogout:(state)=>{
