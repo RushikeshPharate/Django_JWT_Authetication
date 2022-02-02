@@ -18,10 +18,11 @@ from django.urls import path, include
 
 from user_auth import urls
 
-
+# customised jwt token
+from user_auth.views import MyTokenObtainPairView
 
 from rest_framework_simplejwt.views import (
-    TokenObtainPairView,
+    # TokenObtainPairView,
     TokenRefreshView,
 )
 
@@ -32,6 +33,6 @@ urlpatterns = [
     path('',include(urls)),
 
     # access and refresh tokens
-    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/token/', MyTokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]
