@@ -23,8 +23,6 @@ const Home=()=> {
   };
 
   return (
-    // <div className={styles.container}>
-    
     <div>{isAuthenticated ? <div>
       <Head>
         <title>Weather App</title>
